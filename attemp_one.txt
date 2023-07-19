@@ -1,0 +1,176 @@
+Script started on Wed Jun 28 13:14:25 2023
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                           
+ 
+]7;file://Corys-MacBook-Air.local/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices
+[0m[27m[24m[J(base) corydewitt@Corys-MacBook-Air PX4_devices % [K[?2004hcconda activate cenv[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                           
+ 
+]7;file://Corys-MacBook-Air.local/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices
+[0m[27m[24m[J(cenv) corydewitt@Corys-MacBook-Air PX4_devices % [K[?2004hconda activate cenv[19Dexit               [15Dscript attempt1.txt[19Dclear              [14Dpython3 arxiv.py > attempt1.txt[31D2                              [30Dpython3 arxiv.py > attempt1.txt[31Dclear                          [26Dpython3 arxiv.py[16Dclear           [11Dpython3 arxiv.py > attempt1.txt[31D2                              [30Dpython3 arxiv.py > attempt1.txt[31Dclear                          [26Dscript attempt1.txt[19Dexit               [15Dconda activate cenv[19D                   [19Dppython3 main    script.py[?2004l
+
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Enter your choice: 1. Upload your own pdf, 2. Analyze ICM-42688P datasheet, 3. Exit: 2
+Enter a question or type 'exit': 
+Enter a question or type 'exit': W Giev me       ve me the name ofht   this peripheral div  eci  vice and eplxa  a    x explain it's funcitonality         to             what it's used for
+/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/llm.py:303: UserWarning: The apply_and_parse method is deprecated, instead pass an output parser directly to LLMChain.
+  warnings.warn(
+
+
+Inquiry: Give me the name of this peripheral device and explain what it's used for
+Response:  The peripheral device is the ICM-42688 -P. It is a 6-axis MotionTracking device that combines a 3-axis gyroscope and a 3-axis accelerometer in a small 2.5x3x0.91 mm (14-pin LGA) package. It is used in applications such as AR/VR Controllers, Head Mounted Displays, Wearables, Sports, and Robotics. 
+
+Enter a question or type 'exit': Whate  are some of the buses that         es  ses that the ICM-42688 -P r transmits data thgroug     rough
+Inquiry: What are some of the busses that the ICM-42688 -P transmits data through
+Response:  The ICM-42688 -P transmits data through the I2C, 4-Wire SPI, and 3-Wire SPI busses.
+
+Enter a question or type 'exit': Tell me about all     the pin assignments in    of the I2C via th  section 4.1
+Inquiry: Tell me about the pin assignments of the I2C via section 4.1
+Response:  The pins assignments for the I2C are as follows: AP_SCL/AP_SCLK is pin 13, AP_SDA/AP_SDIO/AP_SDI is pin 14, AP_CS is pin 12, and RESV is pins 2, 3, 7, 10, and 11.
+
+Enter a question or type 'exit': Give em    me a           What are p the prup   urposes o  f the     AP_SCL/AP_SCLK is pin 13, AP_SDA/AP_SDIO/AP_SDI is pin 14, AP_CS is pin 12, and RESV is pins 2, 3, 7, 10, and 11.
+Inquiry: What are the purposes of AP_SCL/AP_SCLK is pin 13, AP_SDA/AP_SDIO/AP_SDI is pin 14, AP_CS is pin 12, and RESV is pins 2, 3, 7, 10, and 11.
+Response:  AP_SCL/AP_SCLK is pin 13 is for AP I3CSM/I2C serial clock; AP_SDA/AP_SDIO/AP_SDI is pin 14 is for AP I3CSM/I2C serial data, and AP SPI serial data I/O in 3-wire mode and serial data input in 4-wire mode; AP_CS is pin 12 is for AP SPI Chip select; RESV is pins 2, 3, 7, 10, and 11 is for no connect or connect to GND.
+
+Enter a question or type 'exit': what can you te               Tell me about the pin assignments for the 4_wire       -wire SPI via Section 34  4.1
+Traceback (most recent call last):
+  File "/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices/script.py", line 122, in <module>
+    main()
+  File "/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices/script.py", line 114, in main
+    result = qa(file=pdf_path, query=query, chain_type="map_rerank", k=2)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices/script.py", line 79, in qa
+    result = qa_chain({"query": user_question})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/base.py", line 166, in __call__
+    raise e
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/base.py", line 160, in __call__
+    self._call(inputs, run_manager=run_manager)
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/retrieval_qa/base.py", line 120, in _call
+    answer = self.combine_documents_chain.run(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/base.py", line 293, in run
+    return self(kwargs, callbacks=callbacks, tags=tags)[_output_key]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/base.py", line 166, in __call__
+    raise e
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/base.py", line 160, in __call__
+    self._call(inputs, run_manager=run_manager)
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/combine_documents/base.py", line 84, in _call
+    output, extra_return_dict = self.combine_docs(
+                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/combine_documents/map_rerank.py", line 100, in combine_docs
+    results = self.llm_chain.apply_and_parse(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/llm.py", line 308, in apply_and_parse
+    return self._parse_generation(result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/llm.py", line 314, in _parse_generation
+    return [
+           ^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/llm.py", line 315, in <listcomp>
+    self.prompt.output_parser.parse(res[self.output_key])
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/output_parsers/regex.py", line 28, in parse
+    raise ValueError(f"Could not parse output: {text}")
+ValueError: Could not parse output:  Pin 13 is AP_SCLK, Pin 14 is AP_SDIO, Pin 12 is AP_CS, and Pin 1 is AP_SDO. Score: 100
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                           
+ 
+]7;file://Corys-MacBook-Air.local/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices
+[0m[27m[24m[J(cenv) corydewitt@Corys-MacBook-Air PX4_devices % [K[?2004hcclear   c  python3 script.py[17Dconda activate cenv[19Dpython3 script.py  [?2004l
+
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Enter your choice: 1. Upload your own pdf, 2. Analyze ICM-42688P datasheet, 3. Exit: 2
+Enter a question or type 'exit': 
+Enter a question or type 'exit': Tell me about the pin assignments for the 4-wire SPI via Section 4.1
+/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/llm.py:303: UserWarning: The apply_and_parse method is deprecated, instead pass an output parser directly to LLMChain.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices/script.py", line 122, in <module>
+    main()
+  File "/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices/script.py", line 114, in main
+    result = qa(file=pdf_path, query=query, chain_type="map_rerank", k=2)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices/script.py", line 82, in qa
+    chat_bot_answer = result['result']['response'][0]
+                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                           
+ 
+]7;file://Corys-MacBook-Air.local/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices
+[0m[27m[24m[J(cenv) corydewitt@Corys-MacBook-Air PX4_devices % [K[?2004hc python3 script.py[?2004l
+
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Enter your choice: 1. Upload your own pdf, 2. Analyze ICM-42688P datasheet, 3. Exit: 2
+Enter a question or type 'exit': 
+Enter a question or type 'exit': Tell me about the pin assignments for the 4-wire SPI via Section 4.1
+/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/llm.py:303: UserWarning: The apply_and_parse method is deprecated, instead pass an output parser directly to LLMChain.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices/script.py", line 123, in <module>
+    main()
+  File "/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices/script.py", line 115, in main
+    result = qa(file=pdf_path, query=query, chain_type="map_rerank", k=2)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices/script.py", line 79, in qa
+    result = qa_chain({"query": user_question})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/base.py", line 166, in __call__
+    raise e
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/base.py", line 160, in __call__
+    self._call(inputs, run_manager=run_manager)
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/retrieval_qa/base.py", line 120, in _call
+    answer = self.combine_documents_chain.run(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/base.py", line 293, in run
+    return self(kwargs, callbacks=callbacks, tags=tags)[_output_key]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/base.py", line 166, in __call__
+    raise e
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/base.py", line 160, in __call__
+    self._call(inputs, run_manager=run_manager)
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/combine_documents/base.py", line 84, in _call
+    output, extra_return_dict = self.combine_docs(
+                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/combine_documents/map_rerank.py", line 100, in combine_docs
+    results = self.llm_chain.apply_and_parse(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/llm.py", line 308, in apply_and_parse
+    return self._parse_generation(result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/llm.py", line 314, in _parse_generation
+    return [
+           ^
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/llm.py", line 315, in <listcomp>
+    self.prompt.output_parser.parse(res[self.output_key])
+  File "/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/output_parsers/regex.py", line 28, in parse
+    raise ValueError(f"Could not parse output: {text}")
+ValueError: Could not parse output:  The pins for the 4-wire SPI are AP_CS (12), AP_SCLK (13), AP_SDI (14), and AP_SDO (1). AP_SDO is also the AP I3CSM/I2C slave address LSB. Score: 100
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                           
+ 
+]7;file://Corys-MacBook-Air.local/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices
+[0m[27m[24m[J(cenv) corydewitt@Corys-MacBook-Air PX4_devices % [K[?2004hcc;e c  python3 script.py[?2004l
+
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Enter your choice: 1. Upload your own pdf, 2. Analyze ICM-42688P datasheet, 3. Exit: 2
+Enter a question or type 'exit': 
+Enter a question or type 'exit': Tell me about the pin assignments for the 4-wire SPI via Section 4.1
+/Users/corydewitt/miniconda3/envs/cenv/lib/python3.11/site-packages/langchain/chains/llm.py:303: UserWarning: The apply_and_parse method is deprecated, instead pass an output parser directly to LLMChain.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices/script.py", line 124, in <module>
+    main()
+  File "/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices/script.py", line 116, in main
+    result = qa(file=pdf_path, query=query, chain_type="map_rerank", k=2)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices/script.py", line 82, in qa
+    chat_bot_answer = result['result']['response'][0]['content'] if result['result']['response'] else 'No answer found.'
+                                                                    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                           
+ 
+]7;file://Corys-MacBook-Air.local/Users/corydewitt/Desktop/Research/REU/playgrnd/PX4_devices
+[0m[27m[24m[J(cenv) corydewitt@Corys-MacBook-Air PX4_devices % [K[?2004h
